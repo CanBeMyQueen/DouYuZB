@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="a3k-Bd-VTs">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="koF-Yy-6si">
+            <objects>
+                <viewController id="56h-0p-Sc3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ide-tn-2lr"/>
+                        <viewControllerLayoutGuide type="bottom" id="GvS-jC-t6l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MY5-cy-Lqr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QAy-so-usQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nT-Ys-Ty5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1535.2" y="494.30284857571218"/>
+        </scene>
+        <!--直播-->
+        <scene sceneID="jBU-AM-3FM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a3k-Bd-VTs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="直播" image="tabLiving.png" selectedImage="tabLivingHL.png" id="bJA-rQ-cLL"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vfZ-ZT-vS6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="56h-0p-Sc3" kind="relationship" relationship="rootViewController" id="Job-3d-cvl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8t-yO-YEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="494.30284857571218"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabLiving.png" width="24" height="24"/>
+        <image name="tabLivingHL.png" width="24" height="24"/>
+    </resources>
+</document>
