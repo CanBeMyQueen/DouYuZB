@@ -8,6 +8,7 @@ target 'DouYu' do
   # Pods for DouYu
 
     pod 'Alamofire'
+    pod 'Kingfisher'
 
   target 'DouYuTests' do
     inherit! :search_paths

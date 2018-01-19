@@ -14,12 +14,18 @@ private let kItemWidth : CGFloat = (kScreenW - 3 * kItemMargin) / 2
 private let kNormalItemHeight : CGFloat = kItemWidth * 3 / 4
 private let kBeautifulItemHeight : CGFloat = kItemWidth * 5 / 4
 private let kSectionHeaderH : CGFloat = 50
+private let kCycleViewHeight : CGFloat = kScreenW * 3 / 8
+private let kGameViewHeight : CGFloat = 90
 
 private let kNormalCellID : String = "kNormalCellID"
 private let kBeautifulCellID : String = "kBeautifulCellID"
 private let kSectionHeaderID : String = "kSectionHeaderID"
 
 class RecommendViewController: UIViewController {
+
+    // 懒加载 RecommengViewModel
+    lazy var recommendVM : RecommondViewModel = RecommondViewModel()
+
     // 懒加载 UICollectionView
     lazy var collectionView : UICollectionView = {[unowned self] in
        
@@ -44,28 +50,27 @@ class RecommendViewController: UIViewController {
         return collectionView
         
     }()
-    
+
+    lazy var cycleView : RecommendClclesView = { () -> RecommendClclesView in 
+        let cycleView = RecommendClclesView.recommendCyclesView()
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewHeight + kGameViewHeight), width: kScreenW, height: kCycleViewHeight)
+        return cycleView
+    }()
+
+    lazy var gameView : RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewHeight, width: kScreenW, height: kGameViewHeight)
+        return gameView
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.purple
-        // Do any additional setup after loading the view.
-        
-        Alamofire.request("http://httpbin.org/get", method: .get).responseJSON { (dataresponse) in
-//            print(dataresponse)
-        }
-        Alamofire.request("http://httpbin.org/post", method: .post, parameters: ["name": "why"]).responseJSON { (dataresponse) in
-            print(dataresponse)
-            guard let result = dataresponse.result.value else {
-                print(dataresponse.result.error)
-                return
-            }
-            print(result)
-        }
-//        Alamofire.request("http://httpbin.org/post", method: .post, parameters: {"name": "any"}).responseJSON { (dataresponse) in
-//            print(dataresponse)
-//        }
+
         // 1.设置 UI
         setupUI()
+        // 2.请求数据
+        loadData()
     }
 
 
@@ -74,36 +79,55 @@ class RecommendViewController: UIViewController {
 extension RecommendViewController {
     public func setupUI() {
         view.addSubview(collectionView)
+        collectionView.addSubview(cycleView)
+        collectionView.addSubview(gameView)
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewHeight + kGameViewHeight, 0, 0, 0)
+    }
+}
+
+extension RecommendViewController {
+    func loadData()  {
+        recommendVM.requestData {
+            self.collectionView.reloadData()
+            self.gameView.groups = self.recommendVM.ancharGroups
+        }
+        recommendVM.requestCycleData {
+            self.cycleView.cycleModles = self.recommendVM.CycleModels
+        }
     }
 }
 
 // UICollectionView 的 dataSource 协议
 extension RecommendViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return recommendVM.ancharGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        } else {
-            return 4
-        }
+        let group = recommendVM.ancharGroups[section]
+        return group.anchorRooms.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = UICollectionViewCell()
+        /// 1.取出模型对象
+        let group = recommendVM.ancharGroups[indexPath.section]
+        let anchor = group.anchorRooms[indexPath.item]
+
+        var cell = BaseCollectionViewCell()
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kBeautifulCellID, for: indexPath)
+         cell = collectionView.dequeueReusableCell(withReuseIdentifier: kBeautifulCellID, for: indexPath) as! BeautifulCollectionViewCell
         } else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+         cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! NormalCollectionViewCell
         }
-        
+        cell.anchorRoom = anchor
         return cell
+
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kSectionHeaderID, for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kSectionHeaderID, for: indexPath) as! HeaderCollectionReusableView
+        let group = recommendVM.ancharGroups[indexPath.section]
+        headerView.group = group
         return headerView
     }
     

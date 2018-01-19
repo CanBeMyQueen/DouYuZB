@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -46,14 +47,42 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fb-sb-rxW">
+                        <rect key="frame" x="195" y="5" width="60" height="20"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="64d-mE-FYL"/>
+                            <constraint firstAttribute="width" constant="60" id="HM9-Z4-RNW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="6666在线">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4c-d5-Ie3">
+                        <rect key="frame" x="5" y="216" width="28.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="3fb-sb-rxW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="6Yn-Kp-5yG"/>
                 <constraint firstItem="MTC-gf-O9S" firstAttribute="centerY" secondItem="Z7n-P9-MRj" secondAttribute="centerY" id="A5H-Ti-sAU"/>
                 <constraint firstItem="Z7n-P9-MRj" firstAttribute="top" secondItem="4ua-mb-i4L" secondAttribute="bottom" constant="5" id="DA6-aM-9zy"/>
                 <constraint firstItem="4ua-mb-i4L" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GfM-Kg-RYm"/>
                 <constraint firstAttribute="trailing" secondItem="4ua-mb-i4L" secondAttribute="trailing" id="JRo-OM-6lj"/>
+                <constraint firstItem="Z7n-P9-MRj" firstAttribute="top" secondItem="u4c-d5-Ie3" secondAttribute="bottom" constant="10" id="MlM-a6-rhO"/>
                 <constraint firstItem="4ua-mb-i4L" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dMg-Lc-WJd"/>
+                <constraint firstAttribute="trailing" secondItem="3fb-sb-rxW" secondAttribute="trailing" constant="5" id="eXt-8j-PjI"/>
+                <constraint firstItem="u4c-d5-Ie3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="fDP-3N-O9O"/>
                 <constraint firstItem="U50-L3-ffG" firstAttribute="centerY" secondItem="Z7n-P9-MRj" secondAttribute="centerY" id="hrj-bk-4I8"/>
                 <constraint firstItem="U50-L3-ffG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="prW-Eh-NkP"/>
                 <constraint firstItem="Z7n-P9-MRj" firstAttribute="leading" secondItem="U50-L3-ffG" secondAttribute="trailing" constant="5" id="uEB-sA-OZC"/>
@@ -61,6 +90,13 @@
                 <constraint firstAttribute="trailing" secondItem="MTC-gf-O9S" secondAttribute="trailing" constant="5" id="uhJ-dK-gJB"/>
             </constraints>
             <size key="customSize" width="260" height="270"/>
+            <connections>
+                <outlet property="cityNameBtn" destination="MTC-gf-O9S" id="sMO-d0-JDO"/>
+                <outlet property="nickNameLabel" destination="u4c-d5-Ie3" id="hIh-jd-JS4"/>
+                <outlet property="onlineNumberBtn" destination="3fb-sb-rxW" id="q00-pl-60i"/>
+                <outlet property="roomImageView" destination="4ua-mb-i4L" id="tBD-na-yi2"/>
+                <outlet property="roomNameLabel" destination="Z7n-P9-MRj" id="iJB-a5-16u"/>
+            </connections>
             <point key="canvasLocation" x="-278" y="-35"/>
         </collectionViewCell>
     </objects>

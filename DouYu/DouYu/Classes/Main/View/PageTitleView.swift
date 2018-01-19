@@ -12,8 +12,8 @@ protocol PageTitleViewDelegate : class {
     func changePageTitleView(titleView : PageTitleView, selectedIndex index : Int)
 }
 
-private let kNormalColor : (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
-private let kSelectedColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
+private let kNormalColor : (CGFloat, CGFloat, CGFloat) = (85/255.0, 85/255.0, 85/255.0)
+private let kSelectedColor : (CGFloat, CGFloat, CGFloat) = (255/255.0, 128/255.0, 0/255.0)
 private var isForbitScrollDelegate = false
 
 
@@ -86,8 +86,7 @@ extension PageTitleView {
             label.textAlignment = .center
             label.tag = index
             label.font = UIFont.systemFont(ofSize: 16.0)
-            label.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
-            
+            label.textColor = UIColor(red: kNormalColor.0, green: kNormalColor.1, blue: kNormalColor.2, alpha: 1)
             let LabelX = labelW * CGFloat(index)
             
             label.frame = CGRect(x: LabelX, y: CGFloat(labelY), width: labelW, height: labelH)
@@ -112,11 +111,11 @@ extension PageTitleView {
         addSubview(bottomLine)
         
         //添加滚动条
-        self.scrollLine.backgroundColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2)
-        
+        self.scrollLine.backgroundColor = UIColor(red: kSelectedColor.0, green: kSelectedColor.1, blue: kSelectedColor.2, alpha: 1)
+
         // guard swift 语法
         guard let firstLabel = labels.first else { return }
-        firstLabel.textColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2)
+        firstLabel.textColor = UIColor(red: kSelectedColor.0, green: kSelectedColor.1, blue: kSelectedColor.2, alpha: 1)
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstLabel.frame.size.width, height: kScrollLineH)
         scrollView.addSubview(scrollLine)
         
@@ -132,12 +131,12 @@ extension PageTitleView {
         print("====");
         // 获取当前点击的 label 并设置成选中色
         guard let currentLabel = tapGes.view as? UILabel else {return}
-        currentLabel.textColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2)
+        currentLabel.textColor = UIColor(red: kSelectedColor.0, green: kSelectedColor.1, blue: kSelectedColor.2, alpha: 1)
         
         // 获取之前选中的 label 并改变颜色
         let oldlabel = labels[currentTag] as UILabel
         currentTag = currentLabel.tag
-        oldlabel.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
+        oldlabel.textColor = UIColor(red: kNormalColor.0, green: kNormalColor.1, blue: kNormalColor.2, alpha: 1)
         
         // 设置滚动条：
         let scrollLineX = CGFloat(currentLabel.tag) * scrollLine.frame.width
@@ -169,8 +168,8 @@ extension PageTitleView {
         //3.1 取出变化范围
         let colorDelta = (kSelectedColor.0 - kNormalColor.0, kSelectedColor.1 - kNormalColor.1, kSelectedColor.2 - kNormalColor.2)
         
-        currentLabel.textColor = UIColor(r: kSelectedColor.0 - (colorDelta.0 * progress), g: kSelectedColor.1 - colorDelta.1 * progress, b: kSelectedColor.2 - colorDelta.2 * progress)
-        targetLabel.textColor = UIColor(r: kNormalColor.0 + (colorDelta.0 * progress), g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
+        currentLabel.textColor = UIColor(red: kSelectedColor.0 - (colorDelta.0 * progress), green: kSelectedColor.1 - colorDelta.1 * progress, blue: kSelectedColor.2 - colorDelta.2 * progress, alpha: 1)
+        targetLabel.textColor = UIColor(red: kNormalColor.0 + (colorDelta.0 * progress), green: kNormalColor.1 + colorDelta.1 * progress, blue: kNormalColor.2 + colorDelta.2 * progress, alpha: 1)
         currentTag = targetIndex
         
     }

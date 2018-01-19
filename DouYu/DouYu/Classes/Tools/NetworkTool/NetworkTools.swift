@@ -23,10 +23,20 @@ class NetworkTools {
      *      paratemers: 请求参数
      *      finistedCallback: 回调函数
      */
-    class func requestData(type : MethodType, urlString : NSString, parameters : [String : String]? = nil, finisedCallback : (_ result : AnyObject) -> ()) {
+    class func requestData(type : MethodType, urlString : String, parameters : [String : String]? = nil, finisedCallback : @escaping (_ result : AnyObject) -> ()) {
 
-// 1.获取 method
-        let method = type == .GET ? Method. : Method.POST
-        Alamofire.request(urlString, method: method, parameters: parameters, encoding: <#T##ParameterEncoding#>, headers: <#T##HTTPHeaders?#>)
+        // 1.获取 method 和 URL
+        let method = type == .GET ? HTTPMethod.get : HTTPMethod.post
+        let url = "\(kBaseUrl)\(urlString)"
+        print(url)
+        // 2.发送网络请求
+        Alamofire.request(url, method: method, parameters: parameters).responseJSON { (dataresponse) in
+//            print(dataresponse)
+            guard let result = dataresponse.result.value else {
+                print(dataresponse.result.error)
+                return
+            }
+            finisedCallback(result as AnyObject)
+        }
     }
 }

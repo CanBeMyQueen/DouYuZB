@@ -8,11 +8,16 @@
 
 import UIKit
 
-class NormalCollectionViewCell: UICollectionViewCell {
+class NormalCollectionViewCell: BaseCollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    /// 属性设置
+    @IBOutlet weak var roomImageView: UIImageView!
+
+    override var anchorRoom : AnchorRoomModel? {
+        didSet {
+            guard let anchor = anchorRoom else {return}
+            super.anchorRoom = anchorRoom
+            self.roomImageView.kf.setImage(with: URL.init(string: anchor.room_src))
+        }
     }
-
 }

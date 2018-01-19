@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewGameCell" customModule="DouYu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="166"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="205" height="166"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSo-jf-oGp">
+                        <rect key="frame" x="0.0" y="145" width="205" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-Ov-UmK">
+                        <rect key="frame" x="77.5" y="90" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="dD3-sn-XDT"/>
+                            <constraint firstAttribute="width" constant="50" id="jgV-Qw-eH2"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="KSo-jf-oGp" secondAttribute="bottom" constant="5" id="HLp-jI-QlW"/>
+                <constraint firstAttribute="trailing" secondItem="KSo-jf-oGp" secondAttribute="trailing" id="HSc-7s-08d"/>
+                <constraint firstItem="KSo-jf-oGp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hTa-l3-xam"/>
+                <constraint firstItem="yc9-Ov-UmK" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="oub-5d-ctE"/>
+                <constraint firstItem="KSo-jf-oGp" firstAttribute="top" secondItem="yc9-Ov-UmK" secondAttribute="bottom" constant="5" id="qlJ-yL-veu"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="205" height="166"/>
+            <connections>
+                <outlet property="gameImageView" destination="yc9-Ov-UmK" id="3Dg-lC-nsq"/>
+                <outlet property="gameNameLabel" destination="KSo-jf-oGp" id="3yq-jK-qoX"/>
+            </connections>
+            <point key="canvasLocation" x="132.5" y="5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -14,3 +14,5 @@ let kTabBarH: CGFloat = 44
 
 let kScreenW = UIScreen.main.bounds.width
 let kScreenH = UIScreen.main.bounds.height
+
+let kBaseUrl = "http://capi.douyucdn.cn/api/"
