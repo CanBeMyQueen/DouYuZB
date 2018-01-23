@@ -12,7 +12,7 @@ class CollectionViewGameCell: UICollectionViewCell {
     @IBOutlet weak var gameImageView: UIImageView!
     
     @IBOutlet weak var gameNameLabel: UILabel!
-    var group : AnchorGroupModel? {
+    var group : BaseGameModel? {
         didSet {
             self.gameNameLabel.text = group?.tag_name
             self.gameImageView.kf.setImage(with: URL.init(string: (group?.icon_url)!))
@@ -21,7 +21,6 @@ class CollectionViewGameCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         gameImageView.layer.cornerRadius = 25
         gameImageView.layer.masksToBounds = true
     }

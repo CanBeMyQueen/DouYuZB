@@ -89,6 +89,8 @@ extension RecommendViewController {
     func loadData()  {
         recommendVM.requestData {
             self.collectionView.reloadData()
+            self.recommendVM.ancharGroups.removeFirst()
+            self.recommendVM.ancharGroups.removeFirst()
             self.gameView.groups = self.recommendVM.ancharGroups
         }
         recommendVM.requestCycleData {

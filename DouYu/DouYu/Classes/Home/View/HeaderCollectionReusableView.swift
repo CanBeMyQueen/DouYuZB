@@ -13,7 +13,8 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     /// 控件属性
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
-
+    @IBOutlet weak var moreBtn: UIButton!
+    
     /// 定义模型属性
     var group : AnchorGroupModel? {
         didSet {
@@ -24,5 +25,11 @@ class HeaderCollectionReusableView: UICollectionReusableView {
             iconImageView.kf.setImage(with: URL.init(string: (group?.small_icon_url)!))
         }
     }
+}
 
+/// MARK:- 扩展从xib中快速创建视图的类方法
+extension HeaderCollectionReusableView {
+    class func headerCollectionReusableView() -> HeaderCollectionReusableView {
+        return Bundle.main.loadNibNamed("HeaderCollectionReusableView", owner: nil, options: nil)?.first as! HeaderCollectionReusableView
+    }
 }

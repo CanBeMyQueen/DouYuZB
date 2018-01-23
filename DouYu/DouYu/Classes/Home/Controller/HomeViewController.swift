@@ -29,9 +29,11 @@ class HomeViewController: UIViewController {
         // 确定子控制器
         var childVcs = [UIViewController]()
         childVcs.append(RecommendViewController())
-        for _ in 0..<3 {
+        childVcs.append(GameViewController())
+        childVcs.append(AmuseViewController())
+        for _ in 0..<1 {
             let vc = UIViewController()
-//            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            vc.view.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255)), green: CGFloat(arc4random_uniform(255)), blue: CGFloat(arc4random_uniform(255)), alpha: 1)
             childVcs.append(vc)
         }
         
@@ -60,9 +62,7 @@ extension HomeViewController {
         
         // 1.设置导航栏
         setupNavigationBar();
-        
         view.addSubview(pageTitleView)
-        
         view.addSubview(pageContentView)
         pageContentView.backgroundColor = UIColor.purple
     }

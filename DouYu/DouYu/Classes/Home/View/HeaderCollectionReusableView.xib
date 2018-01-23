@@ -61,9 +61,10 @@
             </constraints>
             <connections>
                 <outlet property="iconImageView" destination="URI-YV-N1n" id="Txs-to-oAD"/>
+                <outlet property="moreBtn" destination="UDg-gZ-OEp" id="Ir0-hr-aMQ"/>
                 <outlet property="titleLabel" destination="bKu-Wb-C8c" id="UVP-ga-ljY"/>
             </connections>
-            <point key="canvasLocation" x="144" y="-18"/>
+            <point key="canvasLocation" x="-63" y="-90"/>
         </collectionReusableView>
     </objects>
     <resources>

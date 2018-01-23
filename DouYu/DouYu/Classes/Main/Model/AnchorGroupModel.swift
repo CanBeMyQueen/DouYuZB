@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnchorGroupModel: NSObject {
+class AnchorGroupModel: BaseGameModel {
     /// 该组中对应的房间信息
     var room_list : [[String : NSObject]]? {
         // 属性监听器，监听数据改变，如果 room_list 赋值，将赋值的字典转成模型
@@ -21,23 +21,11 @@ class AnchorGroupModel: NSObject {
             }
         }
     }
-    /// 组标题
-    var tag_name : String = ""
-    /// 组显示的图标
-    var icon_url : String = ""
 
     var small_icon_url : String = ""
     // 懒加载主播房间模型对象数组
     lazy var anchorRooms : [AnchorRoomModel] = [AnchorRoomModel]()
-    override init() {
-        
-    }
-    init(dict : [String : NSObject]) {
-        super.init()
-        setValuesForKeys(dict)
-    }
 
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
     /*
     // 重写 setValueForKey 方法，判断房间列表 key, 将房间列表字典数据转换成 model数据
     override func setValue(_ value: Any?, forKey key: String) {

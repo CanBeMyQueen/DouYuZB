@@ -12,10 +12,8 @@ class RecommendGameView: UIView {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    var groups : [AnchorGroupModel]? {
+    var groups : [BaseGameModel]? {
         didSet {
-            groups?.removeFirst()
-            groups?.removeFirst()
             collectionView.reloadData()
         }
     }
@@ -23,7 +21,6 @@ class RecommendGameView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         autoresizingMask = .flexibleLeftMargin
-
         collectionView.register(UINib(nibName: "CollectionViewGameCell", bundle: nil), forCellWithReuseIdentifier: kGameViewCellID)
     }
 }
