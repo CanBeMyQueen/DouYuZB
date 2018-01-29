@@ -14,6 +14,9 @@
 		68310C04201595FF007EF94B /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68310C03201595FF007EF94B /* GameViewModel.swift */; };
 		68310C062015ADD2007EF94B /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68310C052015ADD2007EF94B /* GameModel.swift */; };
 		68310C082015C027007EF94B /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68310C072015C027007EF94B /* BaseGameModel.swift */; };
+		683240D42019CF78007F7DE9 /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683240D32019CF77007F7DE9 /* RoomNormalViewController.swift */; };
+		683240D62019CF93007F7DE9 /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683240D52019CF93007F7DE9 /* RoomShowViewController.swift */; };
+		683240D82019D2AE007F7DE9 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683240D72019D2AE007F7DE9 /* BaseNavigationViewController.swift */; };
 		683585E51F6FCD28001CC1F3 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683585E41F6FCD28001CC1F3 /* RecommendViewController.swift */; };
 		683585E81F6FDE68001CC1F3 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683585E61F6FDE68001CC1F3 /* HeaderCollectionReusableView.swift */; };
 		683585E91F6FDE68001CC1F3 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683585E71F6FDE68001CC1F3 /* HeaderCollectionReusableView.xib */; };
@@ -30,6 +33,10 @@
 		688CFBB91F91EB3D00AD38B0 /* AnchorRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688CFBB81F91EB3D00AD38B0 /* AnchorRoomModel.swift */; };
 		68A4B8852015E2430037AD71 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4B8842015E2430037AD71 /* AmuseViewController.swift */; };
 		68A4B8872015E5B90037AD71 /* AmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4B8862015E5B90037AD71 /* AmuseViewModel.swift */; };
+		68A4B8892016CEF10037AD71 /* BaseAnchorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4B8882016CEF10037AD71 /* BaseAnchorViewModel.swift */; };
+		68A4B88B2016D4400037AD71 /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4B88A2016D4400037AD71 /* BaseAnchorViewController.swift */; };
+		68A4B88D201700560037AD71 /* AmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4B88C201700560037AD71 /* AmuseMenuView.swift */; };
+		68A4B88F201700690037AD71 /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A4B88E201700690037AD71 /* AmuseMenuView.xib */; };
 		68B7281F1F668B9D0059A126 /* tabDiscovery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B728131F668B9D0059A126 /* tabDiscovery@2x.png */; };
 		68B728201F668B9D0059A126 /* tabDiscoveryHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B728141F668B9D0059A126 /* tabDiscoveryHL@2x.png */; };
 		68B728211F668B9D0059A126 /* tabFocus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B728151F668B9D0059A126 /* tabFocus@2x.png */; };
@@ -71,6 +78,11 @@
 		68CBD4361FA01E6000EB255D /* RecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CBD4351FA01E6000EB255D /* RecommendGameView.xib */; };
 		68CBD4431FA031F300EB255D /* CollectionViewGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CBD4411FA031F300EB255D /* CollectionViewGameCell.swift */; };
 		68CBD4441FA031F300EB255D /* CollectionViewGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CBD4421FA031F300EB255D /* CollectionViewGameCell.xib */; };
+		68CFE38020170ADD00017A84 /* AmuseMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFE37E20170ADD00017A84 /* AmuseMenuCollectionViewCell.swift */; };
+		68CFE38120170ADD00017A84 /* AmuseMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CFE37F20170ADD00017A84 /* AmuseMenuCollectionViewCell.xib */; };
+		68CFE3832019737E00017A84 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFE3822019737E00017A84 /* FunnyViewController.swift */; };
+		68CFE3852019788B00017A84 /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFE3842019788B00017A84 /* FunnyViewModel.swift */; };
+		68CFE38720198CCA00017A84 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFE38620198CCA00017A84 /* BaseViewController.swift */; };
 		68DAFB321F70105300637791 /* home_header_hot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DAFB301F70105300637791 /* home_header_hot@2x.png */; };
 		68DAFB331F70105300637791 /* home_header_hot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68DAFB311F70105300637791 /* home_header_hot@3x.png */; };
 		68DAFB361F70150300637791 /* NormalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DAFB341F70150300637791 /* NormalCollectionViewCell.swift */; };
@@ -122,6 +134,9 @@
 		68310C03201595FF007EF94B /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		68310C052015ADD2007EF94B /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		68310C072015C027007EF94B /* BaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
+		683240D32019CF77007F7DE9 /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
+		683240D52019CF93007F7DE9 /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
+		683240D72019D2AE007F7DE9 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
 		683585E41F6FCD28001CC1F3 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		683585E61F6FDE68001CC1F3 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		683585E71F6FDE68001CC1F3 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -144,6 +159,10 @@
 		688CFBB81F91EB3D00AD38B0 /* AnchorRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorRoomModel.swift; sourceTree = "<group>"; };
 		68A4B8842015E2430037AD71 /* AmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		68A4B8862015E5B90037AD71 /* AmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewModel.swift; sourceTree = "<group>"; };
+		68A4B8882016CEF10037AD71 /* BaseAnchorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewModel.swift; sourceTree = "<group>"; };
+		68A4B88A2016D4400037AD71 /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
+		68A4B88C201700560037AD71 /* AmuseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseMenuView.swift; sourceTree = "<group>"; };
+		68A4B88E201700690037AD71 /* AmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
 		68B728131F668B9D0059A126 /* tabDiscovery@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabDiscovery@2x.png"; path = "../tabDiscovery@2x.png"; sourceTree = "<group>"; };
 		68B728141F668B9D0059A126 /* tabDiscoveryHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabDiscoveryHL@2x.png"; path = "../tabDiscoveryHL@2x.png"; sourceTree = "<group>"; };
 		68B728151F668B9D0059A126 /* tabFocus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabFocus@2x.png"; path = "../tabFocus@2x.png"; sourceTree = "<group>"; };
@@ -185,6 +204,11 @@
 		68CBD4351FA01E6000EB255D /* RecommendGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendGameView.xib; sourceTree = "<group>"; };
 		68CBD4411FA031F300EB255D /* CollectionViewGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewGameCell.swift; sourceTree = "<group>"; };
 		68CBD4421FA031F300EB255D /* CollectionViewGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewGameCell.xib; sourceTree = "<group>"; };
+		68CFE37E20170ADD00017A84 /* AmuseMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseMenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		68CFE37F20170ADD00017A84 /* AmuseMenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		68CFE3822019737E00017A84 /* FunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
+		68CFE3842019788B00017A84 /* FunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
+		68CFE38620198CCA00017A84 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		68DAFB301F70105300637791 /* home_header_hot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_header_hot@2x.png"; sourceTree = "<group>"; };
 		68DAFB311F70105300637791 /* home_header_hot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_header_hot@3x.png"; sourceTree = "<group>"; };
 		68DAFB341F70150300637791 /* NormalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -248,6 +272,39 @@
 				7AA56567CECA089C8A019D31 /* Pods-DouYuUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		683240CF2019CF57007F7DE9 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				683240D02019CF57007F7DE9 /* Controller */,
+				683240D12019CF57007F7DE9 /* Model */,
+				683240D22019CF57007F7DE9 /* View */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		683240D02019CF57007F7DE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				683240D32019CF77007F7DE9 /* RoomNormalViewController.swift */,
+				683240D52019CF93007F7DE9 /* RoomShowViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		683240D12019CF57007F7DE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		683240D22019CF57007F7DE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		68707A021F5D357000B0F769 = {
@@ -314,9 +371,11 @@
 		688CFBAF1F9050EC00AD38B0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				68A4B8882016CEF10037AD71 /* BaseAnchorViewModel.swift */,
 				688CFBB01F90512C00AD38B0 /* RecommondViewModel.swift */,
 				68310C03201595FF007EF94B /* GameViewModel.swift */,
 				68A4B8862015E5B90037AD71 /* AmuseViewModel.swift */,
+				68CFE3842019788B00017A84 /* FunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -325,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				68B7280F1F668B720059A126 /* Main */,
+				683240CF2019CF57007F7DE9 /* Room */,
 				68B728371F668FD70059A126 /* Mine */,
 				68B7280C1F668B720059A126 /* Follow */,
 				68B7280D1F668B720059A126 /* Home */,
@@ -424,6 +484,7 @@
 			children = (
 				68707A121F5D357000B0F769 /* Main.storyboard */,
 				68B728351F668D830059A126 /* MainViewController.swift */,
+				683240D72019D2AE007F7DE9 /* BaseNavigationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -502,9 +563,12 @@
 			children = (
 				68B7284D1F6692200059A126 /* Home.storyboard */,
 				68B7284F1F6692560059A126 /* HomeViewController.swift */,
+				68CFE38620198CCA00017A84 /* BaseViewController.swift */,
+				68A4B88A2016D4400037AD71 /* BaseAnchorViewController.swift */,
 				683585E41F6FCD28001CC1F3 /* RecommendViewController.swift */,
 				68310C012011F859007EF94B /* GameViewController.swift */,
 				68A4B8842015E2430037AD71 /* AmuseViewController.swift */,
+				68CFE3822019737E00017A84 /* FunnyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -531,6 +595,10 @@
 				68CBD4351FA01E6000EB255D /* RecommendGameView.xib */,
 				68CBD4411FA031F300EB255D /* CollectionViewGameCell.swift */,
 				68CBD4421FA031F300EB255D /* CollectionViewGameCell.xib */,
+				68A4B88C201700560037AD71 /* AmuseMenuView.swift */,
+				68A4B88E201700690037AD71 /* AmuseMenuView.xib */,
+				68CFE37E20170ADD00017A84 /* AmuseMenuCollectionViewCell.swift */,
+				68CFE37F20170ADD00017A84 /* AmuseMenuCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -796,6 +864,7 @@
 				68B728211F668B9D0059A126 /* tabFocus@2x.png in Resources */,
 				68B728241F668B9D0059A126 /* tabHomeHL@2x.png in Resources */,
 				68B728271F668B9D0059A126 /* tabMine@2x.png in Resources */,
+				68CFE38120170ADD00017A84 /* AmuseMenuCollectionViewCell.xib in Resources */,
 				68B728661F669DB10059A126 /* Image_scan_click@3x.png in Resources */,
 				6800FDC91F965E90003AD569 /* RecommendClclesView.xib in Resources */,
 				68B7286A1F669DBC0059A126 /* btn_search@3x.png in Resources */,
@@ -808,6 +877,7 @@
 				683585E91F6FDE68001CC1F3 /* HeaderCollectionReusableView.xib in Resources */,
 				68DAFB411F701A2D00637791 /* Image_online@3x.png in Resources */,
 				68CBD4361FA01E6000EB255D /* RecommendGameView.xib in Resources */,
+				68A4B88F201700690037AD71 /* AmuseMenuView.xib in Resources */,
 				68B728261F668B9D0059A126 /* tabLivingHL@2x.png in Resources */,
 				68B7281F1F668B9D0059A126 /* tabDiscovery@2x.png in Resources */,
 				68FDAEB81F9E48F0001DE132 /* CycleCollectionViewCell.xib in Resources */,
@@ -999,20 +1069,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				683240D82019D2AE007F7DE9 /* BaseNavigationViewController.swift in Sources */,
 				68707A0F1F5D357000B0F769 /* AppDelegate.swift in Sources */,
 				688CFBB11F90512C00AD38B0 /* RecommondViewModel.swift in Sources */,
 				68A4B8872015E5B90037AD71 /* AmuseViewModel.swift in Sources */,
 				68B728791F67B7050059A126 /* UIColor-Extension.swift in Sources */,
 				68310C04201595FF007EF94B /* GameViewModel.swift in Sources */,
+				68CFE38720198CCA00017A84 /* BaseViewController.swift in Sources */,
 				683585E51F6FCD28001CC1F3 /* RecommendViewController.swift in Sources */,
+				68A4B88B2016D4400037AD71 /* BaseAnchorViewController.swift in Sources */,
 				68310C022011F859007EF94B /* GameViewController.swift in Sources */,
 				688CFBB91F91EB3D00AD38B0 /* AnchorRoomModel.swift in Sources */,
 				68B728711F66A1DB0059A126 /* UIBarButtonItem-Extension.swift in Sources */,
 				68B728731F6780860059A126 /* PageTitleView.swift in Sources */,
+				68CFE3832019737E00017A84 /* FunnyViewController.swift in Sources */,
 				68B728771F67B3FD0059A126 /* PageContentView.swift in Sources */,
+				68CFE38020170ADD00017A84 /* AmuseMenuCollectionViewCell.swift in Sources */,
 				68FDAEB41F9E4292001DE132 /* CycleModel.swift in Sources */,
 				68310C062015ADD2007EF94B /* GameModel.swift in Sources */,
 				68310C082015C027007EF94B /* BaseGameModel.swift in Sources */,
+				68CFE3852019788B00017A84 /* FunnyViewModel.swift in Sources */,
 				68B728361F668D830059A126 /* MainViewController.swift in Sources */,
 				68A4B8852015E2430037AD71 /* AmuseViewController.swift in Sources */,
 				68B728751F6783E60059A126 /* Common.swift in Sources */,
@@ -1023,10 +1099,14 @@
 				68FDAEB71F9E48F0001DE132 /* CycleCollectionViewCell.swift in Sources */,
 				688CFBB71F91E5FB00AD38B0 /* AnchorGroupModel.swift in Sources */,
 				6800FDC71F965E4D003AD569 /* RecommendClclesView.swift in Sources */,
+				683240D42019CF78007F7DE9 /* RoomNormalViewController.swift in Sources */,
+				68A4B88D201700560037AD71 /* AmuseMenuView.swift in Sources */,
 				688CFBB51F91DF1D00AD38B0 /* NSDate-Extension.swift in Sources */,
 				68DAFB361F70150300637791 /* NormalCollectionViewCell.swift in Sources */,
 				683585E81F6FDE68001CC1F3 /* HeaderCollectionReusableView.swift in Sources */,
 				688CFBAE1F8F023000AD38B0 /* NetworkTools.swift in Sources */,
+				68A4B8892016CEF10037AD71 /* BaseAnchorViewModel.swift in Sources */,
+				683240D62019CF93007F7DE9 /* RoomShowViewController.swift in Sources */,
 				68B728501F6692560059A126 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

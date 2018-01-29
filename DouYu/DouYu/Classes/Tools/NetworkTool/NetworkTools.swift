@@ -23,7 +23,7 @@ class NetworkTools {
      *      paratemers: 请求参数
      *      finistedCallback: 回调函数
      */
-    class func requestData(type : MethodType, urlString : String, parameters : [String : String]? = nil, finisedCallback : @escaping (_ result : AnyObject) -> ()) {
+    class func requestData(type : MethodType, urlString : String, parameters : [String : Any]? = nil, finisedCallback : @escaping (_ result : AnyObject) -> ()) {
 
         // 1.获取 method 和 URL
         let method = type == .GET ? HTTPMethod.get : HTTPMethod.post
